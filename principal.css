@@ -1578,7 +1578,7 @@ a {
 .w3-light-gray,
 .w3-hover-light-gray:hover {
     color: #000!important;
-    background-color: #f1f1f1!important
+    background-color: darkgrey
 }
 
 .w3-dark-grey,
@@ -1773,7 +1773,7 @@ a {
 
 <!-- Login -->
 
-.container input {
+.uname {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -1790,7 +1790,7 @@ a {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 250px;
+    width: 100%;
 }
 
 #id01 button:hover {
@@ -1812,8 +1812,9 @@ a {
 }
 
 #id01 img.avatar {
-    width: 40%;
+    width: 30%;
     border-radius: 50%;
+    border: 1px solid black;
 }
 
 #id01 .container {
