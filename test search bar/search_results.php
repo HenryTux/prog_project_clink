@@ -1,11 +1,11 @@
 <?php
     include("dbconnect.php");
     
-    if (!isset($_POST['search'])) {
+    if (!isset($_POST['main_search'])) {
         header("Location:index.php");
     }
 
-    $search_sql="SELECT * FROM usuarios WHERE ciudad LIKE '%".$_POST['search']."%'";
+    $search_sql="SELECT * FROM usuarios WHERE ciudad LIKE '%".$_POST['main_search']."%'";
     $search_query=mysql_query($search_sql);
 
     if (mysql_num_rows($search_query) != 0) {
