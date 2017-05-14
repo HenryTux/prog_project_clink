@@ -15,7 +15,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
   <a style="text-decoration:none" href="#" class="w3-bar-item w3-text-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Clink, tu servicio de limpieza en un CLICK</b></a>
-  <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey">Registrate</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" onclick="document.getElementById('id02').style.display='block'">Registrate</a>
   <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" onclick="document.getElementById('id01').style.display='block'">Login</a>
 </div>
 
@@ -61,9 +61,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </div>
 </header>
 
-  <!-- Pop Up Login -->
+<!-- Pop Up Login -->
 
-<!-- The Modal -->
 <div id="id01" class="modal">
 
   <!-- Modal Content -->
@@ -93,6 +92,48 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
   </form>
 </div> 
+
+<!-- Registro -->
+
+
+<div id="id02" class="modal">
+
+  <form class="modal-content animate" method="post" action="/action_page.php">
+
+   <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <label><b>Nombre</b></label>
+      <br><br>
+      <input style="width: 100%" type="text" placeholder="Escriba su nombre" name="nombre" required>
+        <br><br>
+      <label><b>Apellido</b></label>
+      <br><br>
+      <input style="width: 100%" type="text" placeholder="Escriba su apellido" name="apellido" required>
+        <br><br>
+      <label><b>Email</b></label>
+      <br><br>
+      <input style="width: 100%" type="text" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,3}" placeholder="Introduzca su email" name="email" required>
+        <br><br>
+        <label><b>Localidad</b></label>
+      <br><br>
+      <input style="width: 100%" type="text" placeholder="Escriba su localidad" name="localidad" required>
+        <br><br>
+        <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+    <label>Hombre</label>
+    <br>
+    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+    <label>Mujer</label>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px;">
@@ -179,6 +220,17 @@ window.onclick = function(event) {
     }
 }
 </script> 
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == pmodal) {
+        pmodal.style.display = "none";
+    }
+}    
+    
+</script>
 </body>
 </html>
