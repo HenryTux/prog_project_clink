@@ -25,23 +25,80 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
 
 
-
+      
   <img class="w3-image" src="LOFT-portada.jpeg" alt="London" width="1500" height="700">
 
 <div class=class="w3-display-middle" style="width:65%">
 <form class="w3-container w3-white flotador w3-display-middle" style="width:65%">
   <h2 style="text-align:center">Busca tu asistente del hogar</h2>
-  <div class="w3-section">
-    <input class="w3-input" type="text" placeholder="Ej: Madrid" required>
+  <div class="w3-section">     
     <label>Ciudad</label>
+    <br>
+    <select id="localidadBuscador" name="localidad" required>
+             <option value="">- Seleccione una provincia -</option>
+             <option value='alava'>Álava</option>
+             <option value='albacete'>Albacete</option>
+             <option value='alicante'>Alicante</option>
+             <option value='almeria'>Almería</option>
+             <option value='asturias'>Asturias</option>
+             <option value='avila'>Ávila</option>
+             <option value='badajoz'>Badajoz</option>
+             <option value='barcelona'>Barcelona</option>
+             <option value='burgos'>Burgos</option>
+             <option value='caceres'>Cáceres</option>
+             <option value='cadiz'>Cádiz</option>
+             <option value='cantabria'>Cantabria</option>
+             <option value='castellon'>Castellón</option>
+             <option value='ceuta'>Ceuta</option>
+             <option value='ciudadreal'>Ciudad Real</option>
+             <option value='cordoba'>Córdoba</option>
+             <option value='cuenca'>Cuenca</option>
+             <option value='girona'>Girona</option>
+             <option value='laspalmas'>Las Palmas</option>
+             <option value='granada'>Granada</option>
+             <option value='guadalajara'>Guadalajara</option>
+             <option value='guipuzcoa'>Guipúzcoa</option>
+             <option value='huelva'>Huelva</option>
+             <option value='huesca'>Huesca</option>
+             <option value='illesbalears'>Illes Balears</option>
+             <option value='jaen'>Jaén</option>
+             <option value='acoruña'>A Coruña</option>
+             <option value='larioja'>La Rioja</option>
+             <option value='leon'>León</option>
+             <option value='lleida'>Lleida</option>
+             <option value='lugo'>Lugo</option>
+             <option value='madrid'>Madrid</option>
+             <option value='malaga'>Málaga</option>
+             <option value='melilla'>Melilla</option>
+             <option value='murcia'>Murcia</option>
+             <option value='navarra'>Navarra</option>
+             <option value='ourense'>Ourense</option>
+             <option value='palencia'>Palencia</option>
+             <option value='pontevedra'>Pontevedra</option>
+             <option value='salamanca'>Salamanca</option>
+             <option value='segovia'>Segovia</option>
+             <option value='sevilla'>Sevilla</option>
+             <option value='soria'>Soria</option>
+             <option value='tarragona'>Tarragona</option>
+             <option value='tenerife'>Tenerife</option>
+             <option value='teruel'>Teruel</option>
+             <option value='toledo'>Toledo</option>
+             <option value='valencia'>Valencia</option>
+             <option value='valladolid'>Valladolid</option>
+             <option value='vizcaya'>Vizcaya</option>
+             <option value='zamora'>Zamora</option>
+             <option value='zaragoza'>Zaragoza</option>
+
+      </select>
+    
   </div>
 
   <div class="w3-row">
   <div class="w3-half">
-    <input id="milk" class="w3-check" type="checkbox" checked="checked">
+    <input id="manana" class="w3-check" type="checkbox">
     <label>Mañana</label>
     <br>
-    <input id="sugar" class="w3-check" type="checkbox">
+    <input id="tarde" class="w3-check" type="checkbox">
       <label>Tarde</label>
     <br><br>
   </div>
@@ -56,7 +113,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   </div>
     </div>
     <p><button class="w3-button w3-dark-grey">Buscar</button></p>
-
+    
 </form>
 </div>
 </header>
@@ -74,9 +131,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="container">
-      <label><b>Usuario</b></label>
+      <label><b>Email</b></label>
       <br><br>
-      <input style="width: 100%" type="text" placeholder="Introduzca usuario" name="uname" required>
+      <input style="width: 100%" type="text" placeholder="Introduzca su email" name="umail" required>
         <br><br>
       <label><b>Contraseña</b></label>
       <br><br>
@@ -91,7 +148,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <span class="psw">Olvido su <a href="#">contraseña?</a></span>
     </div>
   </form>
-</div>
+</div> 
 
 <!-- Registro -->
 
@@ -116,21 +173,92 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <br><br>
       <input style="width: 100%" type="text" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,3}" placeholder="Introduzca su email" name="email" required>
         <br><br>
+        <label><b>Contraseña</b></label>
+      <br><br>
+        <input style="width: 100%" type="password" placeholder="Contraseña" name="pass" required>
+        <br><br>
         <label><b>Localidad</b></label>
       <br><br>
-      <input style="width: 100%" type="text" placeholder="Escriba su localidad" name="localidad" required>
+      <select id="localidad" name="localidad" required>
+             <option value="">- Seleccione una provincia -</option>
+             <option value='alava'>Álava</option>
+             <option value='albacete'>Albacete</option>
+             <option value='alicante'>Alicante</option>
+             <option value='almeria'>Almería</option>
+             <option value='asturias'>Asturias</option>
+             <option value='avila'>Ávila</option>
+             <option value='badajoz'>Badajoz</option>
+             <option value='barcelona'>Barcelona</option>
+             <option value='burgos'>Burgos</option>
+             <option value='caceres'>Cáceres</option>
+             <option value='cadiz'>Cádiz</option>
+             <option value='cantabria'>Cantabria</option>
+             <option value='castellon'>Castellón</option>
+             <option value='ceuta'>Ceuta</option>
+             <option value='ciudadreal'>Ciudad Real</option>
+             <option value='cordoba'>Córdoba</option>
+             <option value='cuenca'>Cuenca</option>
+             <option value='girona'>Girona</option>
+             <option value='laspalmas'>Las Palmas</option>
+             <option value='granada'>Granada</option>
+             <option value='guadalajara'>Guadalajara</option>
+             <option value='guipuzcoa'>Guipúzcoa</option>
+             <option value='huelva'>Huelva</option>
+             <option value='huesca'>Huesca</option>
+             <option value='illesbalears'>Illes Balears</option>
+             <option value='jaen'>Jaén</option>
+             <option value='acoruña'>A Coruña</option>
+             <option value='larioja'>La Rioja</option>
+             <option value='leon'>León</option>
+             <option value='lleida'>Lleida</option>
+             <option value='lugo'>Lugo</option>
+             <option value='madrid'>Madrid</option>
+             <option value='malaga'>Málaga</option>
+             <option value='melilla'>Melilla</option>
+             <option value='murcia'>Murcia</option>
+             <option value='navarra'>Navarra</option>
+             <option value='ourense'>Ourense</option>
+             <option value='palencia'>Palencia</option>
+             <option value='pontevedra'>Pontevedra</option>
+             <option value='salamanca'>Salamanca</option>
+             <option value='segovia'>Segovia</option>
+             <option value='sevilla'>Sevilla</option>
+             <option value='soria'>Soria</option>
+             <option value='tarragona'>Tarragona</option>
+             <option value='tenerife'>Tenerife</option>
+             <option value='teruel'>Teruel</option>
+             <option value='toledo'>Toledo</option>
+             <option value='valencia'>Valencia</option>
+             <option value='valladolid'>Valladolid</option>
+             <option value='vizcaya'>Vizcaya</option>
+             <option value='zamora'>Zamora</option>
+             <option value='zaragoza'>Zaragoza</option>
+
+      </select>
         <br><br>
-        <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+    <div class="w3-row">
+    <div class="w3-half">
+    <input id="male" class="w3-radio" type="radio" name="gender" value="hombre" checked>
     <label>Hombre</label>
     <br>
-    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+    <input id="female" class="w3-radio" type="radio" name="gender" value="mujer">
     <label>Mujer</label>
-
+    <br><br>
     </div>
-
+    
+    <div class="w3-half">
+    <input id="usuario" class="w3-radio" type="radio" name="usuario" value="empleador" checked>
+    <label>Usuario</label>
+    <br>
+    <input id="empleado" class="w3-radio" type="radio" name="usuario" value="empleado">
+    <label>Asistente</label>
+    </div>
+    </div>
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
-      <button type="submit">Login</button>
+      <button type="submit">Registro</button>
+    </div>
+    
     </div>
   </form>
 </div>
@@ -138,7 +266,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px;">
 
-
+  
 
   <!-- Explore Nature -->
   <div class="w3-container">
@@ -147,7 +275,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   </div>
   <div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
-      <img src="/w3images/ocean2.jpg" alt="Norway" style="width:100%">
+      
       <div class="w3-container w3-white">
         <h3>West Coast, Norway</h3>
         <p class="w3-opacity">Roundtrip from $79</p>
@@ -156,7 +284,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       </div>
     </div>
     <div class="w3-half w3-margin-bottom">
-      <img src="/w3images/mountains2.jpg" alt="Austria" style="width:100%">
+      
       <div class="w3-container w3-white">
         <h3>Mountains, Austria</h3>
         <p class="w3-opacity">One-way from $39</p>
@@ -169,35 +297,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <!-- Newsletter -->
   <div class="w3-container">
     <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card-2 w3-hover-opacity-off">
-      <h2>Get the best offers first!</h2>
-      <p>Join our newsletter.</p>
+      <h2>Enterate de todas nuestras novedades</h2>
+      <p>Suscribete a nuestro newsletter.</p>
       <label>E-mail</label>
-      <input class="w3-input w3-border" type="text" placeholder="Your Email address">
-      <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+      <input class="w3-input w3-border" type="text" placeholder="Tu dirección de Email">
+      <button type="button" class="w3-button w3-red w3-margin-top">Suscríbete</button>
     </div>
   </div>
-
+  
   <!-- Contact -->
   <div class="w3-container">
-    <h2>Contact</h2>
-    <p>Let us book your next trip!</p>
-    <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-    <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+    <h2>Contacto</h2>
+    
+    <i class="fa fa-map-marker" style="width:30px"></i> Madrid, España<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +34 91 4151515<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="fc95929a93bc9f90959297d29f9391">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script><br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Deje aquí tu mensaje ..." required name="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">ENVIA TU MENSAJE</button></p>
     </form>
   </div>
-
+  
 <!-- End page content -->
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
-  <h5>Find Us On</h5>
+  <h5>Encuentranos en:</h5>
   <div class="w3-xlarge w3-padding-16">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -206,7 +334,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
  <script>
@@ -219,7 +346,7 @@ window.onclick = function(event) {
         pmodal.style.display = "none";
     }
 }
-</script>
+</script> 
 <script>
 // Get the modal
 var modal = document.getElementById('id02');
@@ -229,8 +356,8 @@ window.onclick = function(event) {
     if (event.target == pmodal) {
         pmodal.style.display = "none";
     }
-}
-
+}    
+    
 </script>
 </body>
 </html>
