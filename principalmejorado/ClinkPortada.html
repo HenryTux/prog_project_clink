@@ -41,7 +41,7 @@
         <img class="w3-image" src="LOFT-portada.jpeg" alt="London" width="1500" height="700">
 
         <div class=class="w3-display-middle" style="width:65%">
-            <form class="w3-container w3-white flotador w3-display-middle" style="width:65%">
+            <form class="w3-container w3-white flotador w3-display-middle" style="width:65%" action="ficherophp.php" method="post">
                 <h2 style="text-align:center">Busca tu asistente del hogar</h2>
                 <div class="w3-section">
                     <label>Ciudad</label>
@@ -135,7 +135,7 @@
     <div id="id01" class="modal">
 
         <!-- Modal Content -->
-        <form class="modal-content animate" action="ficherophp.php">
+        <form class="modal-content animate" action="ficherophp.php" method="post">
 
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -175,11 +175,15 @@
             <div class="container">
                 <label><b>Nombre</b></label>
                 <br><br>
-                <input style="width: 100%" type="text" placeholder=" Escriba su nombre" name="nombre" required>
+                <input style="width: 100%" type="text" placeholder="Escriba su nombre" name="nombre" required>
                 <br><br>
                 <label><b>Apellido</b></label>
                 <br><br>
-                <input style="width: 100%" type="text" placeholder=" Escriba su apellido" name="apellido" required>
+                <input style="width: 100%" type="text" placeholder="Escriba su apellido" name="apellido" required>
+                <br><br>
+                 <label><b>Teléfono</b></label>
+                <br><br>
+                <input style="width: 100%" type="string" placeholder="Escriba su telefono" name="telefono" required>
                 <br><br>
                 <label><b>Email</b></label>
                 <br><br>
@@ -187,7 +191,7 @@
                 <br><br>
                 <label><b>Contraseña</b></label>
                 <br><br>
-                <input style="width: 100%" type="password" placeholder=" Contraseña" name="pass" required>
+                <input style="width: 100%" type="password" placeholder="Contraseña" name="pass" required>
                 <br><br>
                 <label><b>Localidad</b></label>
                 <br><br>
