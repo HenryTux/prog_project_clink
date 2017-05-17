@@ -1,0 +1,4 @@
+1. Links al perfil de facebook y twitter puestos en los iconos de abajo del todo.
+2. Contacto abajo del todo
+3. Pestañas FAQS  // QUIENES SOMOS // CONTACTANOS 
+4. Texto pequeño añadido al cuadro de texto de quienes somos.
