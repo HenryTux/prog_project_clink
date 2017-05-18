@@ -2,3 +2,4 @@
 2. Contacto abajo del todo
 3. Pestañas FAQS  // QUIENES SOMOS // CONTACTANOS 
 4. Texto pequeño añadido al cuadro de texto de quienes somos.
+5. Boton de cabecera "quienes somos" enlazado a la direccion propia de la pagina.
