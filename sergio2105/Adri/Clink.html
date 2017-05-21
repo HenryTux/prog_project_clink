@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<title>CLINK, limpieza en un click</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../sergio2105/principal.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
+    
+    .myLink {
+        display: none
+    }
+
+</style>
+
+<body class="w3-light-grey">
+
+    <?php
+    
+        session_start();
+    
+        if(!isset($_SESSION["usuario"])){
+            
+            
+            header("location:ClinkPortada.php");
+            
+        }
+    
+    ?>
+
+        <!-- Navigation Bar -->
+		
+        <div class="w3-bar w3-white w3-border-bottom w3-xlarge top">
+            <a style="text-decoration:none" href="#" class="w3-bar-item w3-text-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Clink, tu servicio de limpieza en un CLICK</b></a>
+              <div class="dropdown">
+                    <button class="w3-button w3-hover-red"><img id="fotousu" src="../sergio2105/fpo_avatar.png">
+                    <?php echo $_SESSION['nom'] . " " . $_SESSION['ape']; ?>
+                </button>
+                <div class="dropdown-content">
+                        <a href="../sergio2105/pruebaPErfil.php"><img style="width:40px;height:35px" src="../sergio2105/user.png">Ver perfil</a>
+                        <a href="../sergio2105/CierreSesion.php"><img style="width:50px;height:35px" src="../sergio2105/logout.png">Cerrar Sesion</a>
+
+                </div>
+              </div>
+		 <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" onClick="document.getElementById('id03').style.display='block'">
+Contáctanos</a>
+		 <a href="#Quiénes somos" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" onClick="document.getElementById('id04').style.display='block'">
+Quiénes somos</a>
+		 <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" onClick="document.getElementById('id05').style.display='block'">
+FAQ's</a>
+        </div>
+
+        <!-- Header -->
+        <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+
+            <img class="w3-image" src="../sergio2105/LOFT-portada.jpeg" alt="London" width="1500" height="700">
+
+            <div class=class="w3-display-middle" style="width:65%">
+                <form class="w3-container w3-white flotador w3-display-middle" style="width:65%" method="post" action="../sergio2105/busqueda.php">
+                    <h2 style="text-align:center">Busca tu asistente del hogar</h2>
+                    <div class="w3-section">
+                        <label>Ciudad</label>
+                        <br>
+                        <select id="localidadBuscador" name="localidad" required>
+             <option value="">- Seleccione una provincia -</option>
+             <option value='alava'>Álava</option>
+             <option value='albacete'>Albacete</option>
+             <option value='alicante'>Alicante</option>
+             <option value='almeria'>Almería</option>
+             <option value='asturias'>Asturias</option>
+             <option value='avila'>Ávila</option>
+             <option value='badajoz'>Badajoz</option>
+             <option value='barcelona'>Barcelona</option>
+             <option value='burgos'>Burgos</option>
+             <option value='caceres'>Cáceres</option>
+             <option value='cadiz'>Cádiz</option>
+             <option value='cantabria'>Cantabria</option>
+             <option value='castellon'>Castellón</option>
+             <option value='ceuta'>Ceuta</option>
+             <option value='ciudadreal'>Ciudad Real</option>
+             <option value='cordoba'>Córdoba</option>
+             <option value='cuenca'>Cuenca</option>
+             <option value='girona'>Girona</option>
+             <option value='laspalmas'>Las Palmas</option>
+             <option value='granada'>Granada</option>
+             <option value='guadalajara'>Guadalajara</option>
+             <option value='guipuzcoa'>Guipúzcoa</option>
+             <option value='huelva'>Huelva</option>
+             <option value='huesca'>Huesca</option>
+             <option value='illesbalears'>Illes Balears</option>
+             <option value='jaen'>Jaén</option>
+             <option value='acoruna'>A Coruña</option>
+             <option value='larioja'>La Rioja</option>
+             <option value='leon'>León</option>
+             <option value='lleida'>Lleida</option>
+             <option value='lugo'>Lugo</option>
+             <option value='madrid'>Madrid</option>
+             <option value='malaga'>Málaga</option>
+             <option value='melilla'>Melilla</option>
+             <option value='murcia'>Murcia</option>
+             <option value='navarra'>Navarra</option>
+             <option value='ourense'>Ourense</option>
+             <option value='palencia'>Palencia</option>
+             <option value='pontevedra'>Pontevedra</option>
+             <option value='salamanca'>Salamanca</option>
+             <option value='segovia'>Segovia</option>
+             <option value='sevilla'>Sevilla</option>
+             <option value='soria'>Soria</option>
+             <option value='tarragona'>Tarragona</option>
+             <option value='tenerife'>Tenerife</option>
+             <option value='teruel'>Teruel</option>
+             <option value='toledo'>Toledo</option>
+             <option value='valencia'>Valencia</option>
+             <option value='valladolid'>Valladolid</option>
+             <option value='vizcaya'>Vizcaya</option>
+             <option value='zamora'>Zamora</option>
+             <option value='zaragoza'>Zaragoza</option>
+
+      </select>
+
+                    </div>
+
+                    <div class="w3-row">
+                        <div class="w3-half">
+                            <input id="manana" class="w3-check" type="checkbox">
+                            <label>Mañana</label>
+                            <br>
+                            <input id="tarde" class="w3-check" type="checkbox">
+                            <label>Tarde</label>
+                            <br><br>
+                        </div>
+
+                        <div class="w3-half">
+                            <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+                            <label>Hombre</label>
+                            <br>
+                            <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+                            <label>Mujer</label>
+                            <br>
+                        </div>
+                    </div>
+                    <p id="busqueda"><button name="submit" class="w3-button w3-dark-grey" type="submit">Buscar</button> </p>
+
+                </form>
+            </div>
+        </header>
+
+        <!-- Page content -->
+
+                    <!-- Explore Nature -->
+<div class="w3-container">
+    <h3><a name="Quiénes somos">Quiénes somos</a></h3>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+
+                <div class="w3-container w3-white">
+                    <p class="w3-opacity">Somos una plataforma web encargada de facilitar la comunicacion entre los asistentes del hogar disponibles y los usuarios que requieran de sus servicios.</p>
+                    <p>Somos una plataforma web encargada de facilitar la comunicacion entre los asistentes del hogar disponibles y los usuarios que requieran de sus servicios.</p>
+                </div>
+            </div>
+        </div>
+
+			<!-- Contact -->
+  <div class="w3-container">
+    <h2>Contacto</h2>
+    <p>Datos de contacto</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Madrid, España<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +34 914551515<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: info@clink.com<br>
+  </div>
+
+
+
+
+        <!-- End page content -->
+            <!-- Footer -->
+            <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+                <h5>Encuentranos en:</h5>
+                <div class="w3-xlarge w3-padding-16">
+                    <a href="https://www.facebook.com/Clink-856514321156514/" class="fa fa-facebook-official w3-hover-opacity"
+					style="text-decoration:none"></a>
+                    <a href="#" class="fa fa-instagram w3-hover-opacity" style="text-decoration:none"></a>
+                    <a href="https://twitter.com/proyectoclink" class="fa fa-twitter w3-hover-opacity" style="text-decoration:none"></a>
+                    <a href="#" class="fa fa-linkedin w3-hover-opacity" style="text-decoration:none"></a>
+                </div>
+            </footer>
+
+                <!--Start of Tawk.to Script-->
+                <script type="text/javascript">
+                    var Tawk_API = Tawk_API || {},
+                        Tawk_LoadStart = new Date();
+                    (function() {
+                        var s1 = document.createElement("script"),
+                            s0 = document.getElementsByTagName("script")[0];
+                        s1.async = true;
+                        s1.src = 'https://embed.tawk.to/5918e31d4ac4446b24a6f07f/default';
+                        s1.charset = 'UTF-8';
+                        s1.setAttribute('crossorigin', '*');
+                        s0.parentNode.insertBefore(s1, s0);
+                    })();
+
+                </script>
+                <!--End of Tawk.to Script-->
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == pmodal) {
+                            pmodal.style.display = "none";
+                        }
+                    }
+
+                </script>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id02');
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == pmodal) {
+                            pmodal.style.display = "none";
+                        }
+                    }
+
+                </script>
+
+
+</body>
+
+</html>
